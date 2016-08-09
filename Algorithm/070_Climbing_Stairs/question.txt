@@ -1,0 +1,17 @@
+You are climbing a stair case. It takes n steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+可以把这个爬楼梯问题转换成斐波那契数列，爬第 n 层的楼梯，需要第 n - 1 层的方式与 n - 2 层的方式相加，因为爬一层可以一步一步或者2步一起爬。
+
+但是这个题不能直接使用递归，会提示执行超时，因为有很多地方会重复计算。
+
+例如：
+                                 5
+                               /   \
+                              4     3
+                            /  \   /  \ 
+                           3   2  2    1
+                          / \
+                         2   1
+从上面的图就可以看出来 3 重复计算，所以实现的时候，我们把之前计算过的值保存下来。
