@@ -19,13 +19,10 @@ public class Solution {
             List<TreeNode> tmpNodes = new ArrayList<TreeNode>();
             List<Integer> data = new ArrayList<Integer>();
             
-            while(!queue.isEmpty()) {
+            int size = queue.size();
+            for(int i = 0; i <size; i++) {
                 TreeNode node = queue.remove();
-                tmpNodes.add(node);
                 data.add(node.val);
-            }
-            
-            for (TreeNode node : tmpNodes) {
                 if (node.left != null) queue.add(node.left);
                 if (node.right != null) queue.add(node.right);
             }
