@@ -1,0 +1,14 @@
+ Given  an  arbitrary  ransom  note  string  and  another  string  containing  letters from  all  the  magazines,  write  a  function  that  will  return  true  if  the  ransom   note  can  be  constructed  from  the  magazines ;  otherwise,  it  will  return  false.   
+
+Each  letter  in  the  magazine  string  can  only  be  used  once  in  your  ransom  note.
+
+Note:
+You may assume that both strings contain only lowercase letters.
+
+canConstruct("a", "b") -> false
+canConstruct("aa", "ab") -> false
+canConstruct("aa", "aab") -> true
+
+大意：
+
+给定两个字符串magazines和ransomNote，问是否可以从magazines中抽取字母（每个字母只能用一次）组成ransomNote
